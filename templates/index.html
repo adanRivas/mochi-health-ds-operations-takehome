@@ -8,6 +8,13 @@
 <body>
   <div class="container mt-4">
     <h2>How Was Your Patient Experience?</h2>
+
+    {% if errorMsg %}
+      <div class="alert alert-warning" role="alert">
+        {{ errorMsg }}
+      </div>
+    {% endif %}
+
     <form action="/" method="POST">
         <!-- Mood selection input group -->
         <div class="input-group mb-3">

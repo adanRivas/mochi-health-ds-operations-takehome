@@ -32,34 +32,26 @@ Edit the configuration file (i.e., vibes/config.py) to set:
 
 ## Usage
 
-1. Start the Application:
+1. Submit a Mood Entry:
 
-```bash
-python app.py
-```
-
-2. Submit a Mood Entry:
-
-- Visit http://127.0.0.1:5000/ in your web browser.
+- Visit https://mochi-health-ds-operations-takehome-production.up.railway.app/ in your web browser.
 
 - Select your mood (or enter a custom one) and add any notes.
 
 - Submit the form. If the mood is valid, you'll be redirected to a confirmation page. 
 
-3. View Charts:
+2. View Charts:
 
-Navigate to http://127.0.0.1:5000/charts to see an interactive Plotly bar chart summarizing mood frequency by day.
+Navigate to https://mochi-health-ds-operations-takehome-production.up.railway.app/charts to see an interactive Plotly bar chart summarizing mood frequency by day.
 
 
 ## Near-term Enhancements
 
-As this app graduates from a quick prototype to more well rounded early product, the following changes should be done 
+As this app graduates from a quick prototype to a more developed early product, the following TODOs remain: 
 
 - Refactor Chart Logic: Move the Plotly and data aggregation logic from the /charts route into `vibes/vibes.py`.
 
 - Additional Chart Filtering: Enhance the charts page with filtering options, such as by date range or specific moods, to allow for more dynamic data exploration.
 
 - UI/UX Improvements: Improve the front-end design with a responsive layout and additional CSS templates and js frameworks (to be stored under `templates`).
-
-- Store Google Sheets api credentials as a github secret and make accessible to python logic with GitHub Actions Workflow.
 

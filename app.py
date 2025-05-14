@@ -19,17 +19,19 @@ gs_logger = vibes.GoogleSheetsLogger(
 def index():
     if request.method == "POST":
         patient_mood = request.form.get("mood")
-        # redirect if == default value
+        # redirect if mood is default value of "Select..."
         if patient_mood == config.DEFAULT_MOOD:
+            error_msg = "Please select a valid mood."
             return render_template(
                 template_name_or_list="index.html",
                 defaultMood=config.DEFAULT_MOOD,
-                moodsList=config.MOODS_LIST
+                moodsList=config.MOODS_LIST,
+                errorMsg=error_msg
             )
         note = request.form.get("note")
         gs_logger.log_mood(mood=patient_mood, note=note)
 
-        # TODO: show that submission was successful - redirect to complete or finish page
+        # submission was successful - redirect to complete or finish page
         return redirect("/complete")
 
     return render_template(
@@ -66,4 +68,4 @@ def charts():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
