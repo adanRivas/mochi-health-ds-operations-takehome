@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Mood</title>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>How Was Your Patient Experience?</h2>
+    <form action="/" method="POST">
+        <!-- Mood selection input group -->
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="mood">Mood</span>
+            <select class="form-select" name="mood" aria-label="Select your mood">
+                <!-- Loop through your emotionList passed from app.py -->
+                <option selected>{{ defaultMood }}</option>
+                    {% for mood in moodsList %}
+                        <option>{{ mood }}</option>
+                    {% endfor %}
+            </select>
+        </div>
+
+        <!-- Note input group -->
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="note">Note</span>
+            <input type="text" class="form-control" name="note" placeholder="Leave a comment or note" aria-label="Leave a comment or note" />
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

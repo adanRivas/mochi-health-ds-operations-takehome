@@ -1,0 +1,8 @@
+flask
+gspread
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+pandas
+matplotlib
+plotly
