@@ -1,7 +1,5 @@
-# configurations.py
-
 # List of predefined emotions
-MOODS_LIST = ["Happy", "Sad", "Excited", "Nervous", "Relaxed", "Grateful", "Frustrated", "Other"]
+MOODS_LIST = ["Happy", "Down", "Excited", "Nervous", "Anxious", "Relaxed", "Grateful", "Upset", "Mad", "Other"]
 DEFAULT_MOOD = 'Choose...'
 
 # Google Sheets configuration
